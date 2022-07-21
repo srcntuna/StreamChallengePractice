@@ -14,11 +14,14 @@ public class Main {
         StatisticsOutputService statisticsOutputService = new JsonFileStatisticsOutputService();
         TextStatisticsService textStatisticsService = new TextStatisticsService();
 
+        // String result = textInputService.getText();
+        // System.out.println(result);
+
         // Build up processor (since it requires dependencies) (wouldn't it be nice if we had a framework that could do this chore?)
         //    Feel free to name this thing something better
         Processor processor = new Processor(textInputService, statisticsOutputService, textStatisticsService);
 
-        // Run it!
+        // // Run it!
         processor.process();
     }
 }

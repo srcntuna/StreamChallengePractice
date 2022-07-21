@@ -22,5 +22,9 @@ public class Processor {
      */
     public void process() {
         // TODO
+
+        String ourText = textInputService.getText();
+        textStatisticsService.getStatistics(ourText);
+
     }
 }
